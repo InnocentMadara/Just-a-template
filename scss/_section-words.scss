@@ -1,0 +1,220 @@
+.section-words{
+  padding-left: 210px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  &>*{
+    width: 100%;
+  }
+  &__text-content{
+    background-color: #f26522;
+    padding: 107px 216px 89px 58px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    gap: 35px 85px;
+
+    font-family: 'Open Sans';
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #ffffff;
+  }
+}
+
+.register-block{
+  background-color: #323339;
+  padding: 62px 62px 81px;
+  &__title{
+    font-family: Raleway;
+    font-size: 35px;
+    line-height: 39px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 37px;
+    margin-left: 4px;
+  }
+  &__inputs{
+    display: flex;
+    gap: 9px;
+  }
+  &__input-name,
+  &__input-phone,
+  &__input-mail{
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding: 26px;
+    font-family: Montserrat;
+    font-size: 12px;
+    line-height: 23px;
+    font-weight: 400;
+    color: #83969f;
+  }
+  &__input-name{
+    width: 194px;
+  }
+  &__input-phone{
+    width: 194px;
+  }
+  &__input-mail{
+    width: 294px;    
+  }
+  &__button{
+    border-radius: 4px;
+    width: 156px;
+    background-color: rgba(255,255,255,0.0);
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    font-family: Montserrat;
+    font-size: 15px;
+    line-height: 23px;
+    font-weight: 400;
+    padding: 16px;
+    color: #ffffff;
+    transition: 0.3s;
+    &:hover{
+      background-color: #fff;
+      color: #323339;
+    }
+  }
+}
+.content-block{
+  img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  max-width: 1164px;
+  display: grid;
+  grid-template: [start] "high image" 1fr [row]
+                [row]  "high wide" 1fr [row-end]/1fr 2fr;
+  position: relative;
+  top: -211px;
+  margin-bottom: -211px;
+  .high-block{
+    grid-area: high;
+    padding: 73px 47px;
+    background:#f26522;
+    color: white;
+    &__title{
+      margin-bottom: 26px;
+    }
+    &__text-content{
+      font-family: 'Open Sans';
+      font-size: 14px;
+      line-height: 23px;
+      font-weight: 400;
+      color: #ffffff;
+      &+&{
+        margin-top: 50px;
+      }
+    }
+  }
+  .image{
+    grid-area: image;
+    height: 100%;
+  }
+  .wide-block{
+    grid-area: wide;
+    padding: 85px 56px;
+    color: #3a4d69;
+    &__title{
+      margin: 0 200px 27px 0;
+      word-wrap: break-word;
+    }
+    &__text-content{
+      color: #83969f;
+      margin: 0 50px 0 0;
+      word-wrap: break-word;
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  .section-words{
+    padding-left: 0;
+    &__text-content{
+      padding: 80px 58px 80px 58px;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .register-block{
+    padding: 52px 40px 64px;
+      &__input-name{
+        width: 23.15%;
+      }
+      &__input-phone{
+        width: 23.15%;
+      }
+      &__input-mail{
+        width: 35.08%;    
+      }
+      &__button{
+        width: 18.62%;
+      }
+      &__input-name,
+      &__input-phone,
+      &__input-mail{
+        padding: 16px 10px;
+      }
+    }
+}
+@media (max-width: 767px) {
+  .section-words{
+    .register-block{
+      &__inputs{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 40px;
+      }
+      &__input-name,
+      &__input-phone,
+      &__input-mail,
+      &__button{
+        width: auto;
+      }
+    }
+    .background-image{
+      display: none;
+    }
+    .content-block{
+      display: flex;
+      flex-direction: column;
+      top: 0;
+      margin-bottom: 0;
+      .high-block{
+        order: 2;
+      }
+      .image{
+        order: 1;
+        display: flex;
+      }
+      .wide-block{
+        order: 3;
+        &__title{
+          margin: 0 40px 27px 0;
+        }
+        &__text-content{
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .section-words{
+    &__text-content{
+      display: flex;
+      flex-direction: column  ;
+    }
+    .register-block{
+      &__inputs{
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}

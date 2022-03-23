@@ -1,0 +1,21 @@
+@import './reset';
+@import './main';
+@import './header';
+@import './section-orange';
+@import './section-melbourne';
+@import './title-words';
+@import './section-words';
+
+.wrapper{
+  max-width: 1600px;
+  position: relative;
+  margin: 0 auto;
+}
+.title{
+  font-family: Raleway;
+  font-size: 35px;
+  line-height: 39px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: inherit;
+}
