@@ -20,10 +20,15 @@ header{
     color: #ffffff;
     text-decoration: none;
     &:hover::before{
+      width: 100%;left: 0;
+    }
+    &::before{
       content: '';
+      transition: width .3s, left .3s;
+      left: 50%;
       position: absolute;
       bottom: 10px;
-      width: 100%;
+      width: 0;
       height: 2px;
       background-color: #f26522;
     }
